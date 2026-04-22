@@ -53,13 +53,15 @@ The project uses a simple XOR-based encryption method to protect stored data. Si
 
 ├── fileio.h
 
-├── crypto.c (also a cryptoold.c file also exists ignore it)
+├── crypto.c
 
 ├── crypto.h
 
 ├── list.c
 
 ├── list.h
+
+├── makefile
 
 └── README.md
 
