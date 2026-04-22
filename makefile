@@ -1,23 +1,16 @@
-# Makefile — Secure Password Manager
-# Usage:
-#   make builds the program (app.exe)
-#   make clean deletes app.exe and .o files
+# Makefile Secure Password Manager
+# Usage:make builds the program (app.exe) and clean deletes app.exe and .o files
 CFLAGS = -Wall -std=c99
 SRCS = main.c crypto.c list.c fileio.c admin.c user.c # All source files
 OBJS = main.o crypto.o list.o fileio.o admin.o user.o # Object files generated from each .c file
- 
-# Final output executable name
+
 TARGET = app.exe
- 
-# Default: build the program
 run: $(TARGET)
  
-# Link all .o files into the final executable
 $(TARGET): $(OBJS)
 	gcc $(CFLAGS) -o $(TARGET) $(OBJS)
 	@echo "Build successful!! Now run with: ./app.exe"
  
-# Compile each .c file into a .o file
 main.o:   main.c
 	gcc $(CFLAGS) -c main.c
  
@@ -36,6 +29,6 @@ admin.o:  admin.c admin.h
 user.o:   user.c user.h
 	gcc $(CFLAGS) -c user.c
  
-rmove: # Remove compiled files
+rmove: 
 	rm *.o $(TARGET)
  
