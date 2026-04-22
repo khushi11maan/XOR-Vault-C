@@ -34,7 +34,7 @@ int searchlist(const entry *head, const char *tofind){
     while (curr)
     {
         if (strstr(curr->site,tofind) != NULL){
-            printf("%d. %s  %s  %s\n",flag++,curr->site,curr->usern,curr->passw);
+            printf("%d. %s  %s  %s\n",flag+1,curr->site,curr->usern,curr->passw);
             flag++;
         }
         curr = curr->next;
