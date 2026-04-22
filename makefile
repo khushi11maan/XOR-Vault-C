@@ -37,5 +37,5 @@ user.o:   user.c user.h
 	gcc $(CFLAGS) -c user.c
  
 rmove: # Remove compiled files
-	del *.o $(TARGET)
+	rm *.o $(TARGET)
  
